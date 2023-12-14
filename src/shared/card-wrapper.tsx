@@ -8,6 +8,7 @@ type Props = {
   title: string
   className?: string
   children: React.ReactNode
+  isLightActive?: boolean
 }
 
 export default function CardWrapper(props: Props) {
@@ -16,7 +17,10 @@ export default function CardWrapper(props: Props) {
       className={[
         CardConfigs[props.type],
         props.className ?? '',
-        'border border-[#4E4E4E] rounded-xl pb-2.5 px-2 pt-3 w-full',
+        props.isLightActive
+          ? 'border-transparent hover:border-[#4E4E4E]'
+          : 'border-[#2D2D2D]',
+        'border rounded-xl pb-2.5 px-2 pt-3 w-full',
       ].join(' ')}
     >
       <div className='px-2'>

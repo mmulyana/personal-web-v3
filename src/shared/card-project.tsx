@@ -1,21 +1,12 @@
 import Link from 'next/link'
 import CardWrapper from './card-wrapper'
 import Image from 'next/image'
-
-export type Project = {
-  name: string
-  image: string
-  description: string
-  url: string
-  stacks: string[]
-  github: null | string
-  detail: string
-  status: 'FEATURED' | 'LAST' | 'DEFAULT' | 'PROGRESS'
-}
+import { Project } from '@/model/model-project'
 
 type Props = {
   title: string
   project: Project
+  isSmall?: boolean
 }
 
 export default function CardProject(props: Props) {
@@ -24,12 +15,18 @@ export default function CardProject(props: Props) {
       title={props.title}
       type='DEFAULT'
       className='hover:shadow-[0_4px_120px_13px_rgba(119,119,119,0.12)] card-project overflow-hidden'
+      isLightActive
     >
-      <div className='bg-[#222222] rounded-[10px] pt-5 px-8 max-h-[463px] overflow-hidden'>
+      <div
+        className={[
+          'bg-[#222222] rounded-[10px] pt-5 px-8 overflow-hidden',
+          props.isSmall ? 'h-[366px]' : 'h-[463px]',
+        ].join(' ')}
+      >
         <div className='flex justify-between items-start'>
           <div>
             <Link
-              href={props.project.detail}
+              href={`/project/${props.project.id}`}
               className='font-medium text-white'
             >
               {props.project.name}
@@ -42,7 +39,7 @@ export default function CardProject(props: Props) {
                 {props.project.stacks.map((stack, index) => (
                   <Image
                     key={index}
-                    src={stack}
+                    src={'/tech/' + stack}
                     width={32}
                     height={32}
                     alt='tech stack'
@@ -55,6 +52,7 @@ export default function CardProject(props: Props) {
                   <Link
                     href={props.project.github}
                     className='flex gap-2 items-center'
+                    target='_blank'
                   >
                     <p className='text-sm text-white/60'>
                       View on <span className='text-white'>Github</span>
@@ -70,28 +68,30 @@ export default function CardProject(props: Props) {
               )}
             </div>
           </div>
-          <Link
-            href={props.project.url}
-            target='_blank'
-            className='flex gap-0.5 items-center'
-          >
-            <span className='text-white/60 hover:text-white text-sm'>
-              View live
-            </span>
-            <Image
-              src='./icon/link-external.svg'
-              alt={`link to ${props.project.name}`}
-              width={24}
-              height={24}
-            />
-          </Link>
+          {!!props.project.url && (
+            <Link
+              href={props.project.url}
+              target='_blank'
+              className='flex gap-0.5 items-center'
+            >
+              <span className='text-white/60 hover:text-white text-sm'>
+                View live
+              </span>
+              <Image
+                src='./icon/link-external.svg'
+                alt={`link to ${props.project.name}`}
+                width={24}
+                height={24}
+              />
+            </Link>
+          )}
         </div>
         <Image
-          src={props.project.image}
+          src={'/projects/' + props.project.image}
           alt='image'
           width={1200}
           height={800}
-          className='rounded-t-2xl mt-4 opacity-50 blur-[0.8px] duration-200 card-project__thumbnail relative top-5'
+          className='rounded-t-2xl mt-4 opacity-50 blur-[0.7px] duration-200 card-project__thumbnail relative top-5'
         />
       </div>
     </CardWrapper>
