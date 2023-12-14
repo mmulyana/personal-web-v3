@@ -29,5 +29,5 @@ export default function CardWrapper(props: Props) {
 
 const CardConfigs = {
   DEFAULT: 'bg-[#2D2D2D]',
-  TRANSPARENT: 'bg-transparent',
+  TRANSPARENT: 'bg-[#252424]',
 }

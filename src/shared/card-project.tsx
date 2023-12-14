@@ -10,6 +10,7 @@ export type Project = {
   stacks: string[]
   github: null | string
   detail: string
+  status: 'FEATURED' | 'LAST' | 'DEFAULT' | 'PROGRESS'
 }
 
 type Props = {
@@ -22,7 +23,7 @@ export default function CardProject(props: Props) {
     <CardWrapper
       title={props.title}
       type='DEFAULT'
-      className='hover:shadow-[0_4px_120px_13px_rgba(119,119,119,0.12)]'
+      className='hover:shadow-[0_4px_120px_13px_rgba(119,119,119,0.12)] card-project overflow-hidden'
     >
       <div className='bg-[#222222] rounded-[10px] pt-5 px-8 max-h-[463px] overflow-hidden'>
         <div className='flex justify-between items-start'>
@@ -90,7 +91,7 @@ export default function CardProject(props: Props) {
           alt='image'
           width={1200}
           height={800}
-          className='rounded-t-2xl mt-4 opacity-60 hover:opacity-100'
+          className='rounded-t-2xl mt-4 opacity-50 blur-[0.8px] duration-200 card-project__thumbnail relative top-5'
         />
       </div>
     </CardWrapper>

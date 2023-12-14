@@ -1,13 +1,10 @@
 import type { Metadata } from 'next'
-// import { Inter } from 'next/font/google'
 import './globals.css'
-
-// const inter = Inter({ subsets: ['latin'] })
+import Head from 'next/head'
 
 export const metadata: Metadata = {
-  title: 'Mulyana Junior Software Engineer',
-  description:
-    'Mulyana, Junior software engineer spesialize in frontend development',
+  title: 'Mulyana • Software Engineer',
+  description: 'Mulyana, software engineer spesialize in frontend development',
 }
 
 type Props = {
@@ -18,6 +15,9 @@ type Props = {
 export default function RootLayout({ children, modal }: Props) {
   return (
     <html lang='en'>
+      <Head>
+        <link rel='icon' href='/m.ico' />
+      </Head>
       <body>
         {children}
         {modal}

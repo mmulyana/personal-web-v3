@@ -32,7 +32,7 @@ export default function Profile() {
       </div>
       <div className='mt-14'>
         <p className='max-w-[460px] text-xl text-white/60'>
-          <span className='text-white'>Junior Software Engineer</span> based in
+          <span className='text-white font-medium'>Junior Software Engineer</span> based in
           Indonesia and final year student at Ahmad Dahlan University
         </p>
       </div>
