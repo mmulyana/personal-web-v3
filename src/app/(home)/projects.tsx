@@ -1,4 +1,5 @@
 import { projects } from '@/data/data-projects'
+import Badge from '@/shared/badge'
 import CardProject from '@/shared/card-project'
 import CardWrapper from '@/shared/card-wrapper'
 import Image from 'next/image'
@@ -24,7 +25,7 @@ export default function Projects() {
             isSmall
           />
           <CardWrapper title='All Projects' type='TRANSPARENT'>
-            <div className='px-3 flex flex-col gap-4'>
+            <div className='px-3 flex flex-col gap-4 pb-3'>
               {projects
                 .filter(
                   (project) =>
@@ -52,6 +53,9 @@ export default function Projects() {
                               height={20}
                             />
                           </Link>
+                        )}
+                        {project.status === 'PROGRESS' && (
+                          <Badge text='work in progress' type='DEFAULT' />
                         )}
                       </div>
                       <p className='text-xs text-white/40'>

@@ -19,8 +19,8 @@ export default function CardProject(props: Props) {
     >
       <div
         className={[
-          'bg-[#222222] rounded-[10px] pt-5 px-8 overflow-hidden',
-          props.isSmall ? 'h-[366px]' : 'h-[463px]',
+          'bg-[#222222] rounded-[10px] pt-5 px-8 overflow-hidden h-[320px]',
+          props.isSmall ? 'lg:h-[366px]' : 'lg:h-[463px]',
         ].join(' ')}
       >
         <div className='flex justify-between items-start'>
@@ -91,7 +91,7 @@ export default function CardProject(props: Props) {
           alt='image'
           width={1200}
           height={800}
-          className='rounded-t-2xl mt-4 opacity-50 blur-[0.7px] duration-200 card-project__thumbnail relative top-5'
+          className='rounded-t-md md:rounded-t-2xl mt-4 opacity-50 blur-[0.7px] duration-200 card-project__thumbnail relative top-5'
         />
       </div>
     </CardWrapper>
