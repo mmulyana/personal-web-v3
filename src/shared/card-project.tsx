@@ -19,7 +19,7 @@ export default function CardProject(props: Props) {
     >
       <div
         className={[
-          'bg-[#222222] rounded-[10px] pt-5 px-8 overflow-hidden h-[320px]',
+          'bg-[#222222] rounded-[10px] pt-5 px-8 overflow-hidden h-[300px]',
           props.isSmall ? 'lg:h-[366px]' : 'lg:h-[463px]',
         ].join(' ')}
       >
@@ -40,8 +40,8 @@ export default function CardProject(props: Props) {
                   <Image
                     key={index}
                     src={'/tech/' + stack}
-                    width={32}
-                    height={32}
+                    width={40}
+                    height={40}
                     alt='tech stack'
                   />
                 ))}
@@ -54,13 +54,13 @@ export default function CardProject(props: Props) {
                     className='flex gap-2 items-center'
                     target='_blank'
                   >
-                    <p className='text-sm text-white/60'>
+                    <p className='text-sm text-white/60 hidden md:block'>
                       View on <span className='text-white'>Github</span>
                     </p>
                     <Image
                       src='/tech/github.svg'
-                      width={24}
-                      height={24}
+                      width={32}
+                      height={32}
                       alt='github url'
                     />
                   </Link>
@@ -74,7 +74,7 @@ export default function CardProject(props: Props) {
               target='_blank'
               className='flex gap-0.5 items-center'
             >
-              <span className='text-white/60 hover:text-white text-sm'>
+              <span className='text-white/60 hover:text-white text-sm hidden md:block'>
                 View live
               </span>
               <Image
