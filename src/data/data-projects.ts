@@ -6,9 +6,9 @@ let projects: Project[] = [
     name: 'Ngajiaja',
     description:
       'Tutoring platform for Quranic education. Collaborating with other developers',
-    url: null,
+    url: 'https://ngajiaja.com/',
     image: 'ngajiaja.png',
-    stacks: ['react.svg', 'vite.svg', 'tailwind.svg'],
+    stacks: ['react.svg', 'vite.svg', 'tailwind.svg', 'react-query.png'],
     github: null,
     status: 'FEATURED',
   },
