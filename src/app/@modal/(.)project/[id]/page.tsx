@@ -3,6 +3,7 @@
 import { projects } from '@/data/data-projects'
 import { Project } from '@/model/model-project'
 import Image from 'next/image'
+import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
@@ -25,7 +26,7 @@ export default function Page({ params }: { params: { id: string } }) {
 
   if (showModal) {
     return (
-      <div className='w-full h-full fixed top-0 left-0'>
+      <div className='w-full h-full fixed top-0 left-0 z-10'>
         <div
           className='absolute top-0 left-0 w-full h-full bg-[#222222]/80'
           onClick={backToHome}
@@ -44,9 +45,20 @@ export default function Page({ params }: { params: { id: string } }) {
             alt='alt'
             className='rounded-t-xl w-full h-[320px] object-cover object-left-top'
           />
-          <div className='px-5 pb-5 pt-4'>
-            <p className='text-xl text-white'>{detail?.name}</p>
-            <p className='text-white/80 mt-2'>{detail?.description}</p>
+          <div className='px-5 pb-5 pt-4 relative'>
+            <div className='flex justify-between items-center'>
+              <p className='text-xl text-white'>{detail?.name}</p>
+              {!!detail?.url && (
+                <Link
+                  href={detail.url}
+                  className='px-3 py-1.5 rounded border border-gray-400/30 bg-[#4b4b4b] text-white text-sm inline-block'
+                  target='_blank'
+                >
+                  View Live
+                </Link>
+              )}
+            </div>
+            <p className='text-white/80 mt-3'>{detail?.description}</p>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ export default function CardProject(props: Props) {
     >
       <div
         className={[
-          'bg-[#222222] rounded-[10px] pt-5 px-8 overflow-hidden h-[300px]',
+          'bg-[#222222] rounded-[10px] pt-5 px-4 md:px-8 overflow-hidden h-[300px]',
           props.isSmall ? 'lg:h-[366px]' : 'lg:h-[463px]',
         ].join(' ')}
       >
