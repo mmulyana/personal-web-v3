@@ -72,9 +72,9 @@ export default function CardProject(props: Props) {
             <Link
               href={props.project.url}
               target='_blank'
-              className='flex gap-0.5 items-center'
+              className='gap-0.5 items-center hidden md:flex'
             >
-              <span className='text-white/60 hover:text-white text-sm hidden md:block'>
+              <span className='text-white/60 hover:text-white text-sm'>
                 View live
               </span>
               <Image
