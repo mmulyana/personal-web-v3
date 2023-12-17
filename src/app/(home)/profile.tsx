@@ -31,7 +31,7 @@ export default function Profile() {
         </Link>
       </div>
       <div className='mt-14'>
-        <p className='max-w-[460px] text-xl text-white/60'>
+        <p className='max-w-[460px] text-lg md:text-xl text-white/60'>
           <span className='text-white font-medium'>Junior Software Engineer</span> based in
           Indonesia and final year student at Ahmad Dahlan University
         </p>
