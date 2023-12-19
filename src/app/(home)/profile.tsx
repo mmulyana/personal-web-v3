@@ -19,7 +19,11 @@ export default function Profile() {
             />
           </div>
         </div>
-        <Link href='/' className='flex gap-2'>
+        <Link
+          href='https://firebasestorage.googleapis.com/v0/b/portfolio-5fd49.appspot.com/o/pdf%2Fcv.pdf?alt=media'
+          target='_blank'
+          className='flex gap-2'
+        >
           <Image
             src='/icon/cv.svg'
             width={17}
@@ -32,8 +36,10 @@ export default function Profile() {
       </div>
       <div className='mt-14'>
         <p className='max-w-[460px] text-lg md:text-xl text-white/60'>
-          <span className='text-white font-medium'>Junior Software Engineer</span> based in
-          Indonesia and final year student at Ahmad Dahlan University
+          <span className='text-white font-medium'>
+            Junior Software Engineer
+          </span>{' '}
+          based in Indonesia and final year student at Ahmad Dahlan University
         </p>
       </div>
     </>
