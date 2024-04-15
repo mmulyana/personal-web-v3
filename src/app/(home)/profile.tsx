@@ -19,11 +19,7 @@ export default function Profile() {
             />
           </div>
         </div>
-        <Link
-          href='https://firebasestorage.googleapis.com/v0/b/portfolio-5fd49.appspot.com/o/pdf%2Fcv.pdf?alt=media'
-          target='_blank'
-          className='flex gap-2'
-        >
+        <Link href='/cv' target='_blank' className='flex gap-2'>
           <Image
             src='/icon/cv.svg'
             width={17}
