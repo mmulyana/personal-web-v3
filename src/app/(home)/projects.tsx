@@ -25,9 +25,14 @@ export default function Projects() {
 					/>
 					<CardWrapper title='Experiences' type='TRANSPARENT'>
 						<div className='px-3 flex flex-col gap-4 pb-3'>
-							{experiences?.map((item) => (
-								<div className='flex justify-between text-white items-center'>
-									<p className='max-w-[130px] text-sm opacity-60'>{item.title}</p>
+							{experiences?.map((item, index) => (
+								<div
+									key={index}
+									className='flex justify-between text-white items-center'
+								>
+									<p className='max-w-[130px] text-sm opacity-60'>
+										{item.title}
+									</p>
 									<div className='text-right'>
 										<Link
 											href={item.companyLink}
