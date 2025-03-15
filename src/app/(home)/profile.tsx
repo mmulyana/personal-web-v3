@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function Profile() {
 	return (
 		<>
-			<div className='flex justify-between items-center pt-8'>
+			<div className='flex flex-col md:flex-row justify-between items-start gap-4 md:items-center pt-8'>
 				<div className='flex gap-4 items-center'>
 					<div className='w-12 h-12 rounded-full flex justify-center items-center bg-[#2F2F2F]'>
 						<Image src='/logo.png' alt='logo' width={32} height={32} />
