@@ -2,9 +2,9 @@ import { Experience } from '@/model/model-project'
 
 export let experiences: Experience[] = [
 	{
-		title: 'Frontend Developer Freelance',
-		companyName: 'Digirupa',
-		companyLink: 'https://www.linkedin.com/company/digirupa/',
+		title: 'Freelance',
+		companyName: 'Self Employed',
+		companyLink: '#',
 		date: 'Sept 2024 - Current',
 	},
 	{
