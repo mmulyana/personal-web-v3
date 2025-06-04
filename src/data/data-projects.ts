@@ -41,7 +41,7 @@ let projects: Project[] = [
 			'A web application for saving and organizing favorite websites, articles, and online resources.',
 		url: 'https://bookmark-v2.vercel.app/',
 		image: 'bookmark-v2.png',
-		stacks: ['react.svg', 'typescript.svg', 'tailwind.svg'],
+		stacks: ['react.svg', 'typescript.svg', 'firebase.svg'],
 		github: 'https://github.com/mmulyana/bookmark-v2',
 		status: 'LAST',
 	},

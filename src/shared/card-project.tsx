@@ -31,7 +31,7 @@ export default function CardProject(props: Props) {
             >
               {props.project.name}
             </Link>
-            <p className='text-sm text-white/60 mt-2'>
+            <p className='text-white/60 mt-2 max-w-[480px]'>
               {props.project.description}
             </p>
             <div className='mt-4 flex gap-4 items-center'>
