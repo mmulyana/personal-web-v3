@@ -74,7 +74,7 @@ export default function CardProject(props: Props) {
               target='_blank'
               className='gap-0.5 items-center hidden md:flex'
             >
-              <span className='text-white/60 hover:text-white text-sm'>
+              <span className='text-white/60 hover:text-white text-sm text-nowrap'>
                 View live
               </span>
               <Image

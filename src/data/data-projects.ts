@@ -20,7 +20,7 @@ let projects: Project[] = [
 		url: null,
 		image: 'djava.png',
 		stacks: ['nextjs.svg', 'tailwind.svg', 'react-query.svg'],
-		github: 'https://github.com/mmulyana/erp-frontend',
+		github: null,
 		status: 'FEATURED',
 	},
 	{
