@@ -5,7 +5,7 @@ let projects: Project[] = [
 		id: 4,
 		name: 'Barokah ERP',
 		description:
-			'An Enterprise Resource Planning (ERP) system that seamlessly integrates modules for HRIS, project management, and inventory management.',
+			'This ERP system, integrating modules for HRIS, project management, and inventory management, was developed as a final project/thesis for my bachelor degree',
 		url: 'https://erp-stg.barokahjayasemesta.com/?mode=GUEST',
 		image: 'bjs.png',
 		stacks: ['react.svg', 'vite.svg', 'tailwind.svg', 'react-query.svg'],
