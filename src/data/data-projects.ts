@@ -2,6 +2,16 @@ import { Project } from '@/model/model-project'
 
 let projects: Project[] = [
 	{
+		id: 5,
+		name: 'My blog v1',
+		description: "Blog system built using Next.js 15 App Router, Prisma as the ORM, and Better Auth for secure authentication.",
+		url: 'https://my-blog-v1-uhji.vercel.app/',
+		image: 'my-blog.png',
+		stacks: ['nextjs.svg', 'typescript.svg'],
+		github: 'https://github.com/mmulyana/my-blog-v1',
+		status: 'FEATURED',
+	},
+	{
 		id: 4,
 		name: 'Barokah ERP',
 		description:
